@@ -20,15 +20,21 @@ primes и not_primes в зависимости от значения перем�
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 prime=[]
 not_prime=[]
-for num_ in numbers:
-    if num_==0 or num_==1: continue
-    for del_ in range (1, num_):
-        if num_%del_==0 and num_!=del_:
+for num_ in numbers[1:]:
+    for del_ in range (2, num_-1):
+        print(del_)
+        if num_%del_==0:
             not_prime.append(num_)
-            continue
+            break
         else:prime.append(num_)
-print(prime)
-print(not_prime)
+print('простые числа - ', prime)
+print('не простые числа - ', not_prime)
 
+# password=input('enter password - ')
+# if not password:
+#     print('not password')
+# else:
+#     print('good')
 
-
+# for i in range(3):
+#     print(i)
