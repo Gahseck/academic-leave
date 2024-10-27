@@ -18,30 +18,17 @@ primes и not_primes в зависимости от значения перем�
 Выведите списки primes и not_primes на экран(в консоль).
 '''
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-prime=[]
-not_prime=[]
+prime = []
+not_prime = []
 for num_ in numbers[1:]:
-    flag_prime=True
-    for del_ in range (2, num_-1):
-        if num_%del_==0:
-            flag_prime=False
+    flag_prime = True
+    for del_ in range(2, num_ - 1):
+        if num_ % del_ == 0:
+            flag_prime = False
             break
-    if flag_prime==True:
+    if flag_prime == True:
         prime.append(num_)
     else:
         not_prime.append(num_)
-
-
-
-
 print('простые числа - ', prime)
 print('не простые числа - ', not_prime)
-
-# password=input('enter password - ')
-# if not password:
-#     print('not password')
-# else:
-#     print('good')
-
-# for i in range(3):
-#     print(i)
