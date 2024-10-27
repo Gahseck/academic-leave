@@ -21,12 +21,19 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 prime=[]
 not_prime=[]
 for num_ in numbers[1:]:
+    flag_prime=True
     for del_ in range (2, num_-1):
-        print(del_)
         if num_%del_==0:
-            not_prime.append(num_)
+            flag_prime=False
             break
-        else:prime.append(num_)
+    if flag_prime==True:
+        prime.append(num_)
+    else:
+        not_prime.append(num_)
+
+
+
+
 print('простые числа - ', prime)
 print('не простые числа - ', not_prime)
 
