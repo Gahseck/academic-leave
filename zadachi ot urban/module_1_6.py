@@ -24,13 +24,21 @@
 - Для вывода значений на экран используйте функцию print().
 - Помните, что словарь и множество - неупорядоченные коллекции.
 - Больше о методах словарей тут, множеств тут.'''
-print('Работа со словарями')
-my_disk={'Alex':1995, 'Kris':1993, 'Viktor':2004}
-print(my_disk)
-key=input('Введите имя, чей гор рождения хотите узнать - ').title()
-print(my_disk.get(key))
-my_disk.update({'Olga':2002, 'Diva':2014})
-key=input('Введите имя, чьи данные необходимо убрать из словаря - ').title()
-print("Убран из словаря - ", key, 'его год рождения - ',my_disk.pop(key))
-print(my_disk)
+
+# print('Работа со словарями')
+# my_dict = {'Alex': 1995, 'Kris': 1993, 'Viktor': 2004}
+# print(my_dict)
+# key = input('Введите имя, чей гор рождения хотите узнать - ').title()
+# print(my_dict.get(key, "Такого имени нет в списке"))
+# my_dict.update({'Darina': 2002, 'Diva': 2014})
+# key = input('Введите имя, чьи данные необходимо убрать из словаря - ').title()
+# print("Убран из словаря - ", key, ', его год рождения - ', my_dict.pop(key), sep='')
+# print(my_dict, end='\n\n')
 print("Работа с множествами")
+my_set={1,1.1, 1, 1.1, 'string', True, (1,2), 'string', True, (1,2)}
+print(my_set)
+my_set.add(input('Введите строку из трех цифр - '))
+my_set.add(input('Введите строку из четырех цифр - '))
+print(my_set)
+udalit=int(input("Введите цифру 1 - "))
+for udalit
