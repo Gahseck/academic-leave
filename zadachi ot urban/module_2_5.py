@@ -15,6 +15,7 @@ value и возвращать эту матрицу в качестве резу
 После всех циклов верните значение переменной matrix.
 Выведите на экран(консоль) результат работы функции get_matrix.
 '''
+
 n = int(input('n - '))
 m = int(input('m - '))
 value = int(input('value - '))
@@ -22,13 +23,13 @@ value = int(input('value - '))
 
 def get_matrix(n, m, value):
     matrix = []
-    for internal_list in range(1, n + 1):
+    for i in range(n):
         internal_list = []
         matrix.append(internal_list)
-        for J in range(1, m + 1):
+        for J in range(m):
             internal_list.append(value)
     return matrix
 
 
-iz_matrix = get_matrix(get_matrix(n, m, value))
+iz_matrix = get_matrix(n, m, value)
 print(iz_matrix)
