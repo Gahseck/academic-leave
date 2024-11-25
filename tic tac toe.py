@@ -20,5 +20,5 @@ for i in range(1, 10):
         column = int(input('Введите номер столбца (1, 2 или 3) - ')) - 1
         line = int(input('Введите номер строки (1, 2 или 3) - ')) - 1
         area[column][line] = '0'
-# test
+# test 123
     area_printer()
