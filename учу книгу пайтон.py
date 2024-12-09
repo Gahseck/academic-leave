@@ -18,7 +18,7 @@ while 1>0:
         dictionary1[login]=0
         break
     else:
-        print("Такой логин уже существует")
+        print("Такой логин уже существует. Иди на хуй, пиши заново!!!!!")
         continue
 # создаем пароль
 while 1:
@@ -53,7 +53,7 @@ while 1:
         if title==0: degree_of_protection.append('прописные буквы')
         if numer==0: degree_of_protection.append('цифры')
         print('Вы ввели недостаточно сложный пароль\n'
-              'необходимо использовать - ',degree_of_protection)
+              'ДолбоЁб, сказано же-необходимо использовать - ',degree_of_protection)
 
         continue
 
