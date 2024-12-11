@@ -78,7 +78,6 @@
 
 '''
 one_place={}
-one_place_str={}
 for num1 in range(3,21):
     one_place1 = {}
     two_place=[]
