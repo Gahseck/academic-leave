@@ -89,7 +89,7 @@ for num1 in range(3,21):
                 one_place[num1]=two_place
                 one_place1[num1]=two_place
     print(one_place1)
-print(one_place)
+#print(one_place)
 
 
 
