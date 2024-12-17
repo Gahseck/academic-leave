@@ -62,11 +62,27 @@ def string_info(string):  # Функция работы со строкой
     string_list.append(len(string))
     string_list.append(string.upper())
     string_list.append(string.lower())
-    listing = [tuple(string_list)]
-    print(listing)
+    string_list = tuple(string_list)
+    return string_list
 
+
+def is_contains(string, list_):
+    count_cols()  # вызов функции подсчета вызовов
+    flag = 0
+    for i in list_:
+        if string in str(i):
+            flag=True
+            break
+        else:
+            flag=False
+
+    print(flag)
 
 calls = 0
+function_1 = string_info(input('Введите строку - '))
 
-string_info(input('Введите строку -'))
+function_2 = is_contains(input("Введите вторую строку - "),function_1)
+
+
+print(function_1)
 print('Функции вызывались -', calls, "раз")
