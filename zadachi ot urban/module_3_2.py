@@ -19,6 +19,8 @@
 Проверка на корректность e-mail отправителя и получателя.
 Проверка на отправку самому себе.
 Проверка на отправителя по умолчанию.
+
+
 Пункты задачи:
 Создайте функцию send_email, которая принимает 2 обычных аргумента:
 message(сообщение), recipient(получатель) и 1 обязательно именованный
@@ -62,3 +64,31 @@ urban.student@mail.ru
 В решении пришлите ссылку на него.
 Успехов!
 '''
+
+
+
+def send_email(messege, recipient, sender):
+    global x,y,z
+    textovka=('Невозможно отправить письмо с адреса <'+ sender +
+              '> на адрес <'+ recipient +'>')
+    # while True:
+    #     if sender==None:
+    #         sender='university.help@gmail.com'
+    if '@' not in recipient:
+        print(textovka)
+        y = input('Введите email получателя - ')
+        send_email(x,y,z)
+    if '@' not in sender:
+        print(textovka)
+        z = input('Подтвердите email отправителя - "university.help@gmail.com" ')
+        send_email(x,y,z)
+
+
+    else:
+        print('Письмо - ', messege,"Отправлено на email - ", recipient,"с почтового ящика email - ", sender)
+
+
+x = input('Ведите текст сообщения - ')
+y = input('Введите email получателя - ')
+z = input('Подтвердите email отправителя - "university.help@gmail.com" ')
+send_email(x,y,z)
