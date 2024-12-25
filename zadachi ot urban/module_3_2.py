@@ -66,29 +66,37 @@ urban.student@mail.ru
 '''
 
 
+def send_email(messege, recipient, sender='university.help@gmail.com'):
+    global x, y, z
+    while True:
+        textovka = ('Невозможно отправить письмо с адреса <' + sender +
+                    '> на адрес <' + recipient + '>')
+        if '@' not in recipient or not recipient.endswith((".com", ".ru", ".net")):
+            print('_____________________')
+            print(textovka)
+            recipient = input('Введите email получателя - ')
+        elif recipient == 'university.help@gmail.com':
+            print("Невозможно отправить письмо самому себе!")
+            recipient = input('Введите email получателя - ')
+        elif '@' not in sender:
+            print(textovka)
+            sender = input('Введите или подтвердите email отправителя - "university.help@gmail.com" ')
+        elif sender != "university.help@gmail.com":
+            print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ\n'
+                  'Письмо - ', messege, "Отправлено на email - ", recipient, "с почтового ящика email - ", sender)
+            break
 
-def send_email(messege, recipient, sender):
-    global x,y,z
-    textovka=('Невозможно отправить письмо с адреса <'+ sender +
-              '> на адрес <'+ recipient +'>')
-    # while True:
-    #     if sender==None:
-    #         sender='university.help@gmail.com'
-    if '@' not in recipient:
-        print(textovka)
-        y = input('Введите email получателя - ')
-        send_email(x,y,z)
-    if '@' not in sender:
-        print(textovka)
-        z = input('Подтвердите email отправителя - "university.help@gmail.com" ')
-        send_email(x,y,z)
 
-
-    else:
-        print('Письмо - ', messege,"Отправлено на email - ", recipient,"с почтового ящика email - ", sender)
+        else:
+            print('Письмо - ', messege, "Отправлено на email - ", recipient, "с почтового ящика email - ", sender)
+            break
 
 
 x = input('Ведите текст сообщения - ')
 y = input('Введите email получателя - ')
-z = input('Подтвердите email отправителя - "university.help@gmail.com" ')
-send_email(x,y,z)
+z = input('Введите или подтвердите email отправителя - "university.help@gmail.com" \n'
+          '"Enter" - чтобы подтвердить -')
+if z == "":
+    send_email(x, y)
+else:
+    send_email(x, y, sender=z)
